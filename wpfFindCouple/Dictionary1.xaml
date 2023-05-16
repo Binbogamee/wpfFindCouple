@@ -1,0 +1,288 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--кнопки-->
+    <Style x:Key="button_OkBackNewExit" TargetType="Button">
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="Margin" Value="10, 5"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="FontSize" Value="26"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Foreground" Value="Gray"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="button_Main" TargetType="Button">
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="button_finish" TargetType="Button">
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="Margin" Value="10, 0, 60, 0"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="button_author" TargetType="Button">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="Margin" Value="5, 5, 0, 0"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="button_levels" TargetType="Button">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightBlue"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Width" Value="210"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Background" Value="CornflowerBlue"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="Red" BorderThickness="2" CornerRadius="5">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="button_cards" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="LightSeaGreen"/>
+        <Setter Property="Margin" Value="2"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="LightSeaGreen"/>
+            </Trigger>
+            <EventTrigger RoutedEvent="Click">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.2" To="0" AutoReverse="True" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--TextBlock-->
+    <Style x:Key="tb_MainWinLose" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontFamily" Value="algerian"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize" Duration="0:0:0.2" To="70"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize" Duration="0:0:0.2" To="60"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="tb_MainSecond" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="FontFamily" Value="algerian"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize" Duration="0:0:0.2" To="60"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="FontSize" Duration="0:0:0.2" To="50"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="tb_Levels" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="tb_timer" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="Margin" Value="10, 0,0,0"/>
+    </Style>
+
+    <Style x:Key="tb_About" TargetType="TextBlock">
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Height" Value="290"/>
+        <Setter Property="Padding" Value="5, 0"/>
+        <Setter Property="Text" Value="Монстры похитили принцессу. Помогите принцу спасти ее. Для этого выберите уровень сложности и вступите в бой против кровожадных монстров. Чтобы их одолеть, кликайте на карты и ищите пары. Но будьте аккуратны, время ограничено. Сразитесь со всеми монстрами и заберите принцессу из замка злодея."/>
+    </Style>
+
+    <Style x:Key="tb_Autor" TargetType="TextBlock">
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontFamily" Value="comic sans ms"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin" Value="10, 0"/>
+        <Setter Property="Padding" Value="5, 0"/>
+    </Style>
+    
+    <!--ProgressBar-->
+    <Style x:Key="pb_HP" TargetType="ProgressBar">
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="Margin" Value="30, 0"/>
+        <Setter Property="BorderBrush" Value="Maroon"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="Foreground" Value="Lime"/>
+    </Style>
+
+    
+    
+    
+    <Storyboard x:Key="sbFirstCard">
+        <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.2" To="0" AutoReverse="True" />
+    </Storyboard>
+    
+    <Storyboard x:Key="sbSecondCard">
+        <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.2" To="0" AutoReverse="True" />
+    </Storyboard>
+    
+    <Storyboard x:Key="Storyboard">
+        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" From="-2" To="2" Duration="00:00:00.500" AutoReverse="True" />
+    </Storyboard>
+
+    <Storyboard x:Key="damage">
+        <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin">
+            <SplineThicknessKeyFrame KeyTime="00:00:0.2" Value="30, 0, 0, 0"/>
+        </ThicknessAnimationUsingKeyFrames>
+        <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin">
+            <SplineThicknessKeyFrame KeyTime="00:00:0.2" Value="0, 0, 30, 0"/>
+        </ThicknessAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="finish">
+        <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin">
+            <SplineThicknessKeyFrame KeyTime="00:00:0.2" Value="0, 0, 0, 0"/>
+        </ThicknessAnimationUsingKeyFrames>
+    </Storyboard>
+</ResourceDictionary>

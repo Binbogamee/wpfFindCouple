@@ -1,0 +1,152 @@
+﻿<Window x:Class="wpfFindCouple.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfFindCouple"
+        mc:Ignorable="d"
+        Title="Find a couple by Yanina Elizaveta 191-324" Height="450" Width="800" MinWidth="800" MinHeight="450">
+    <Window.Resources>
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+    </Window.Resources>
+    <TabControl x:Name="tabControl1">
+        <TabControl.Background>
+            <ImageBrush ImageSource="\Resources\background.png"/>
+        </TabControl.Background>
+        <TabItem x:Name="tiMain" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Find a couple" Style="{DynamicResource tb_MainWinLose}"/>
+                    <TextBlock Text="save the princess" Style="{DynamicResource tb_MainSecond}"/>
+                </StackPanel>
+                <Button x:Name="buAuthor" Grid.Column="0" Grid.Row="0" Content="Author" Style="{DynamicResource button_author}"/>
+                <Button x:Name="buPlaytiMain" Grid.Column="1" Grid.Row="1" Content="Play" Style="{DynamicResource button_Main}"/>
+                <Button x:Name="buAbouttiMain" Grid.Column="1" Grid.Row="2" Content="About" Style="{DynamicResource button_Main}"/>
+                <Button x:Name="buExittiMain" Grid.Column="1" Grid.Row="3" Content="Exit" Style="{DynamicResource button_Main}"/>
+                <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" Source="/Resources/prince.png"/>
+                <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Source="/Resources/princess.png" />
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="tiLevels" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Select difficulty level" Style="{DynamicResource tb_MainWinLose}" VerticalAlignment="Center"/>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="buSimpletiLevels" Style="{DynamicResource button_levels}">
+                        <StackPanel Width="200" Height="230" VerticalAlignment="Top">
+                            <TextBlock Text="Simple" Style="{DynamicResource tb_Levels}"/>
+                            <Image Source="/Resources/1.png" Width="140"/>
+                            <TextBlock Text="2 монстра, 2 пары" FontSize="18" Style="{DynamicResource tb_Levels}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="buMediumtiLevels" Style="{DynamicResource button_levels}">
+                        <StackPanel Width="200" Height="230" VerticalAlignment="Top">
+                            <TextBlock Text="Medium" Style="{DynamicResource tb_Levels}"/>
+                            <Image Source="/Resources/4.png" Width="140"/>
+                            <TextBlock Text="5 монстров, 5 пар" FontSize="18" Style="{DynamicResource tb_Levels}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="buHardtiLevels" Style="{DynamicResource button_levels}">
+                        <StackPanel Width="200" Height="230" VerticalAlignment="Top">
+                            <TextBlock Text="Hard" Style="{DynamicResource tb_Levels}"/>
+                            <Image Source="/Resources/10.png" Width="120" RenderTransformOrigin="0.347,0.381"/>
+                            <TextBlock Text="10 монстров, 10 пар" FontSize="18" Style="{DynamicResource tb_Levels}"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="buBacktiLevels" Content="Back" Style="{DynamicResource button_OkBackNewExit}"/>
+                    <Button x:Name="buOktiLevels" Content="OK" Style="{DynamicResource button_OkBackNewExit}" Click="buOktiLevels_Click"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="tiGame" Visibility="Collapsed">
+            <Grid x:Name="gridGame">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="buFinishtiGame" Grid.Row="0" Grid.Column="0" Content="Finish" Style="{DynamicResource button_finish}" Click="buFinishtiGame_Click"/>
+                <StackPanel x:Name="spMonsterstiGame" Grid.Column="1" Grid.Row="0"/>
+                <TextBlock x:Name="tbTimetiGame" Grid.Column="0" Grid.Row="2" Text="00:00" Style="{DynamicResource tb_timer}"/>
+                <ProgressBar x:Name="pbHPtiGame" Grid.Column="1" Grid.Row="2" Style="{DynamicResource pb_HP}"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" Text="Осталось монстров:" Style="{DynamicResource tb_timer}" HorizontalAlignment="Right"/>
+                <TextBlock x:Name="lastMonsters" Grid.Column="2" Grid.Row="0" Text="0" Style="{DynamicResource tb_timer}" HorizontalAlignment="Left"/>
+                <UniformGrid x:Name="ugCardstiGame" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
+                    
+                </UniformGrid>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="tiAbout" Visibility="Collapsed">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Style="{DynamicResource tb_About}"/>
+                <Button x:Name="buBacktiAbout" Content="Back" Style="{DynamicResource button_OkBackNewExit}" 
+                        HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            </DockPanel>
+        </TabItem>
+        <TabItem x:Name="tiWin" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tbWintiWin" Grid.Row="0" Text="You Win!!!" 
+                           VerticalAlignment="Center" Style="{DynamicResource tb_MainWinLose}"/>
+                <Image Grid.Row="1" Source="/Resources/win.png" />
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="buNewGametiWin" Content="Start new game" Style="{DynamicResource button_OkBackNewExit}" Click="buNewGame_Click"/>
+                    <Button x:Name="buExittiWin" Content="Exit" Style="{DynamicResource button_OkBackNewExit}"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="tiLosing" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="tblosingtilosing" Grid.Row="0" Text="You lose..." 
+                           VerticalAlignment="Center" Style="{DynamicResource tb_MainWinLose}"/>
+                <Image Grid.Row="1" Source="/Resources/lose.png" />
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="buNewGametilosing" Content="Start new game" Style="{DynamicResource button_OkBackNewExit}" Click="buNewGame_Click"/>
+                    <Button x:Name="buExittilosing" Content="Exit" Style="{DynamicResource button_OkBackNewExit}"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="tiAuthor" Visibility="Collapsed">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Разработчик: Янина Елизавета Олеговна, группа 191-324" Style="{DynamicResource tb_Autor}"/>
+                <TextBlock DockPanel.Dock="Top" Text="Московский Политех, 2022 г." Style="{DynamicResource tb_Autor}"/>
+                
+                <Button x:Name="buBacktiAutor" Content="Back" Style="{DynamicResource button_OkBackNewExit}" 
+                        HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>
