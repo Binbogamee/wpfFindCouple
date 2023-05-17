@@ -8,6 +8,6 @@
 - средний (5 пар, 5 этапов);
 - сложный (10 пар, 10 этапов).
 
-![изображение](https://github.com/Binbogamee/wpfFindCouple/assets/73061751/1303d1f4-abca-4a03-a5ef-638b35e72bdd)
+![изображение](https://github.com/Binbogamee/wpfFindCouple/assets/73061751/ae18548a-5233-4924-81ba-363a43c14927)
 
 Все изображения взяты с https://www.pngwing.com/ru
