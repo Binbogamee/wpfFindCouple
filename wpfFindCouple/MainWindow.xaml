@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpfFindCouple"
         mc:Ignorable="d"
-        Title="Find a couple by Yanina Elizaveta 191-324" Height="450" Width="800" MinWidth="800" MinHeight="450">
+        Title="Find a couple" Height="450" Width="800" MinWidth="800" MinHeight="450">
     <Window.Resources>
         <ResourceDictionary Source="Dictionary1.xaml"/>
     </Window.Resources>
@@ -31,7 +31,6 @@
                     <TextBlock Text="Find a couple" Style="{DynamicResource tb_MainWinLose}"/>
                     <TextBlock Text="save the princess" Style="{DynamicResource tb_MainSecond}"/>
                 </StackPanel>
-                <Button x:Name="buAuthor" Grid.Column="0" Grid.Row="0" Content="Author" Style="{DynamicResource button_author}"/>
                 <Button x:Name="buPlaytiMain" Grid.Column="1" Grid.Row="1" Content="Play" Style="{DynamicResource button_Main}"/>
                 <Button x:Name="buAbouttiMain" Grid.Column="1" Grid.Row="2" Content="About" Style="{DynamicResource button_Main}"/>
                 <Button x:Name="buExittiMain" Grid.Column="1" Grid.Row="3" Content="Exit" Style="{DynamicResource button_Main}"/>
@@ -138,15 +137,6 @@
                     <Button x:Name="buExittilosing" Content="Exit" Style="{DynamicResource button_OkBackNewExit}"/>
                 </StackPanel>
             </Grid>
-        </TabItem>
-        <TabItem x:Name="tiAuthor" Visibility="Collapsed">
-            <DockPanel>
-                <TextBlock DockPanel.Dock="Top" Text="Разработчик: Янина Елизавета Олеговна, группа 191-324" Style="{DynamicResource tb_Autor}"/>
-                <TextBlock DockPanel.Dock="Top" Text="Московский Политех, 2022 г." Style="{DynamicResource tb_Autor}"/>
-                
-                <Button x:Name="buBacktiAutor" Content="Back" Style="{DynamicResource button_OkBackNewExit}" 
-                        HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            </DockPanel>
         </TabItem>
     </TabControl>
 </Window>

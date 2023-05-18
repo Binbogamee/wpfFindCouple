@@ -61,8 +61,6 @@ namespace wpfFindCouple
             buSimpletiLevels.Click += (s, e) => { selectLevel = 1; buOktiLevels.IsEnabled = true; };
             buMediumtiLevels.Click += (s, e) => { selectLevel = 2; buOktiLevels.IsEnabled = true; };
             buHardtiLevels.Click += (s, e) => { selectLevel = 3; buOktiLevels.IsEnabled = true; };
-            buAuthor.Click += (s, e) => tabControl1.SelectedItem = tiAuthor;
-            buBacktiAutor.Click += (s, e) => tabControl1.SelectedItem = tiMain;
             ugCardstiGame.SizeChanged += UgCardstiGame_SizeChanged;
 
         }
